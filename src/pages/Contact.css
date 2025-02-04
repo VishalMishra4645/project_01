@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Contact_main1{
+    width: 100%;
+    height: 110vh;
+    color: white;
+    /* border: 2px solid white; */
+}
+.Contact_top{
+    margin-top: 5%;
+    font-size: 2rem;
+    margin-left: 7%;
+}
+.Contact_Container1{
+    width: 100%;
+    height: 90vh;
+    margin-top: 5%;
+    display: flex;
+    /* border: 2px solid yellow ; */
+}
+.Contact_left{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid white; */
+}
+.Contact_right{
+    width: 50%;
+    height: 90vh;
+    /* border: 1px solid white; */
+}
+.contact_us{
+    margin-left: 15%;
+    font-weight: 400;
+}
+.email{
+    margin-left: 15%;
+    margin-top: 10%;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.num{
+    margin-left: 15%;
+    margin-top: 2%;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.Contact_left p{
+    margin-left: 15%;
+    margin-top: 2%;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.map{
+    width: 70%;
+    height: 35vh;
+    margin-top: 10%;
+    margin-left: 15%;
+    /* border: 2px solid white; */
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.Contact_right input{
+    width: 85%;
+    height: 3vh;
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 5%;
+    background: transparent;
+    color: white;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 15px;
+}
+.Contact_right input:hover{
+    background-color: #8858ED;
+    border: 2px solid white;
+}
+.Contact_right_top{
+    display: flex;
+    margin-top: 15%;
+    margin-left: 13%;
+    gap: 30px;
+}
+.Contact_right_mid{
+    display: flex;
+    margin-top: 4%;
+    margin-left: 13%;
+    gap: 30px;
+}
+.msg{
+    margin-left: 13%;
+    margin-top: 4%;
+}
+#message{
+    width: 69%;
+    height: 13vh;
+    padding: 10px;
+    margin-top: 2%;
+    background: transparent;
+    color: white;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 20px;
+}
+#message:hover{
+    background-color: #8858ED;
+    border: 2px solid white;
+}
+
+.error{
+    margin-top: 4%;
+    color: red;
+}
+.btn{
+    width: 64%;
+    height: 6vh;
+    margin-top: 5%;
+    margin-left: 13%;
+    font-weight: 520;
+    font-size: 1rem;
+    background-color: #8858ED;
+    color: white;
+    border: 2px solid #8858ED;
+    transition: .6s;
+    border-radius: 15px;
+}
+.btn:hover{
+    background-color: #8858ED;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: .6s;
+}
+
+/* main2 start */
+
+.main2{
+    width: 100%;
+    height: 100vh;
+    background-color: #2B1A44;
+    position: relative;
+}
+.contact_main2_top{
+    width: 100%;
+    height: 10vh;
+    margin: auto;
+    position: relative;
+    top: 15%;
+    text-align: center;
+    /* border: 2px solid white; */
+}
+.contact_main2_top h1{
+    font-size: 3rem;
+}
+.contact_main2_mid{
+    width: 65%;
+    height: 6vh;
+    margin: auto;
+    position: relative;
+    top: 18%;
+    /* border: 2px solid white; */
+}
+.contact_main2_mid h3{
+    width: 95%;
+    height: 4vh;
+    margin-top: 1.5%;
+    text-align: center;
+    /* border: 2px solid darkred; */
+}
+.contact_main2_link{
+    width: 50%;
+    height: 4vh;
+    margin-top: 11%;
+    margin-left: 17.4%;
+    display: flex;
+    /* gap: 35px; */
+    /* border: 2px solid#fff; */
+}
+span{
+    cursor: pointer;
+}
+.span1{
+    width: 10%;
+    height: 3vh;
+    margin-left: -0px;
+    /* border: 1px solid red; */
+}
+.span2{
+    width: 20%;
+    height: 3vh;
+    margin-left: -0px;
+    /* border: 1px solid red; */
+}
+/* .accordion_animate{
+    transform: translateY();
+} */
+.contact_main2_bottom{
+    width: 65%;
+    margin: auto;
+    /* border: 2px solid white; */
+}
+.accordion{
+    margin-bottom: -40px;
+}
+.accordion h3{
+    width: 100%;
+    font-weight: 500;
+    margin: 0px;
+    padding: 30px 0px;
+    cursor: pointer;
+    /* border:  1px solid gray; */
+}
+.accordion p{
+    margin: 5px 0px;
+    padding: 0px 10px;
+    transition: .6s;
+    transform: scaleY(0);
+    height: 0px;
+}
+hr{
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 40px;
+    border: 1px solid blueviolet;
+}
+.show
+{
+  height: auto !important;
+  transform: scaleY(1) !important;
+  padding: 10px 0px !important;
+}
+.contact_main2_bottom_02{
+    width: 65%;
+    margin: auto;
+    /* border: 2px solid white; */
+}
