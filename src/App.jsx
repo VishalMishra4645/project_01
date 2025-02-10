@@ -1,13 +1,10 @@
-// import logo from './logo.svg';
-import './App.css';
-import { useGSAP } from '@gsap/react'
-// import ScrollTrigger from 'gsap-trial/ScrollTrigger';
-import gsap from 'gsap';
+import { motion } from 'motion/react'
+import './App.css'
 import img2 from './img/2.avif'
 import img3 from './img/3.webp'
 import img4 from './img/4.webp'
-import img5 from './img/5.webp'
-import img6 from './img/6.webp'
+import img6 from './img/5.webp'
+import img5 from './img/6.webp'
 import img7 from './img/page03-01.jpg'
 import img8 from './img/page03-02.jpg'
 import img9 from './img/page03-03.jpg'
@@ -20,150 +17,119 @@ import img15 from './img/main7_02.webp'
 import img16 from './img/main7_03.webp'
 import img17 from './img/main7_04.webp'
 import img19 from './img/footerimg.png'
-
-
-// import { useEffect, useState } from 'react';
-
-// gsap.registerPlugin(ScrollTrigger);
+import { useForm } from 'react-hook-form'
+import { NavLink } from 'react-router-dom'
 
 function App() {
 
-  useGSAP(()=>{
-    
-    // gsap.to.ScrollTrigger("main",{
-    //   ScrollTrigger:".main"      
-    // })
-    gsap.to(".left",{
-      x:200,
-      duration: 2,
-      delay: 1,
-      opacity: 1
-    })
-    gsap.to(".img2",{
-      x:-200,
-      duration:2,
-      delay:1,
-      opacity:1
-    })
-    gsap.to(".page_04-01",{
-      x:200,
-      duration:2,
-      delay:1.5,
-      opacity:1,
-    })
-    gsap.to(".page_04-02",{
-      x:-200,
-      duration:2,
-      delay:1.8,
-      opacity:1,
-    })
-    gsap.to(".page_04-03",{
-      x:200,
-      duration:2,
-      delay:2,
-      opacity:1,
-    })
-    gsap.to(".page_04-04",{
-      x:-200,
-      duration:2,
-      delay:2,
-      opacity:1,
-    })
-    gsap.to(".main9-img",{
-      y:-200,
-      duration:2,
-      delay:1,
-      opacity:1
-    })
-  })
-
-    // const [scale, setScale] = useState(1);
+  const {
+      register,
+      handleSubmit,
+      watch,
+      formState: { errors, isSubmitting },
+    } = useForm();
   
-    // useEffect(() => {
-    //   const handleScroll = () => {
-    //     // Dynamically change scale based on scroll position
-    //     setScale(1 + window.scrollY / 500); // Adjust 500 for desired zoom speed
-    //   };
-  
-    //   // Listen to the scroll event
-    //   window.addEventListener("scroll", handleScroll);
-  
-    //   // Cleanup the event listener when component is unmounted
-    //   return () => {
-    //     window.removeEventListener("scroll", handleScroll);
-    //   };
-    // }, []);
-  
+    const onSubmit = async (data) => {
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      console.log(data);
+    };
 
   return (
     <>
     
       <div className="main">
-        <img src={img2} className='img2' alt="" />
-        <div className="left">
+        <motion.img animate={{ x:-150, opacity:1}} transition={{duration:2, delay:1}} src={img2} className='img2' alt="" />
+        <motion.div 
+          className="left"
+          animate={{
+            x:150,
+            opacity:1
+          }}
+          transition={{
+            duration:2,
+            delay:1
+          }}
+        >
           <h1>Power up your game</h1>
           <h2>CYBER KID </h2>
           <h3>INFINITE</h3>
           <h4>Now Available on PC & Console</h4>
           <button>Buy Now</button>
-        </div>
+        </motion.div>
       </div>
       <div className="main2">
         <div className="top">
-          <h1>BEST SELLERS</h1>
-          <button>View All</button>
+          <motion.h1 
+            animate={{ 
+              y:-50, 
+              opacity:1
+            }}
+            transition={{
+              duration:2,
+              delay:1
+            }}>BEST SELLERS</motion.h1>
+          <motion.button 
+            animate={{ 
+              y:-10, 
+              opacity:1
+            }}
+            transition={{
+              duration:1,
+              delay:1.5
+            }}>View All</motion.button>
         </div>
         <div className="bottom">
-          <img src={img3} className='img img4' alt="" />
-          <img src={img4} className='img img5' alt="" />
-          <img src={img5} className='img img3' alt="" />
-          <img src={img6} className='img img6' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:3}} src={img3} className='img img4' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:4}} src={img4} className='img img5' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:5}} src={img5} className='img img3' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:6}} src={img6} className='img img6' alt="" />
         </div>
           <div className="bottom-bottom">
-            <div className="box box1">
+            <motion.div animate={{y:-10, opacity:1}} transition={{duration:2, delay:3.8}} className="box box1">
               <h1>Playbox XZ Gold <br /> Edition</h1>
               <h5>$1,000.00</h5>
               <button>Add to Cart</button>
-            </div>
-            <div className="box box2">
+            </motion.div>
+            <motion.div animate={{y:-10, opacity:1}} transition={{duration:2, delay:4.8}} className="box box2">
               <h1>Echo Headset</h1>
               <h5>$39.99</h5>
               <button>Add to Cart</button>
-            </div>
-            <div className="box box3">
+            </motion.div>
+            <motion.div animate={{y:-10, opacity:1}} transition={{duration:2, delay:5.8}} className="box box3">
               <h1>Mach Gaming Chair</h1>
               <h5><del>$129.99</del> $116.99</h5>
               <button>Add to Cart</button>
-            </div>
-            <div className="box box4">
+            </motion.div>
+            <motion.div animate={{y:-10, opacity:1}} transition={{duration:2, delay:6.8}} className="box box4">
               <h1>X-2 WirelessMouse</h1>
               <h5>$24.99</h5>
               <button>Add to Cart</button>
-            </div>
+            </motion.div>
           </div>
+          <NavLink to="/" className="go_up" ><button><i class="bi bi-arrow-up-short"></i></button></NavLink>
       </div>
       <div className="page_03">
         <div className="page_03_top">
           <h1>SHOP BY CATEGORY</h1>
         </div>
         <div className="page_03_bottom">
-          <div className="product product1">
+          <motion.div animate={{scale:10}} transition={{duration:2, delay:0.1}} className="product product1">
             <a href="#" >
               <img src={img7} alt=  ""/>
             </a>
-          </div>
-          <div className="product product2">
+          </motion.div>
+          <motion.div animate={{scale:10}} transition={{duration:2, delay:0.1}} className="product product2">
             <a href="#" >
               <img src={img8} alt="" />
             </a>
               <h1>Accessories</h1>
-          </div>
-          <div className="product product3">
+          </motion.div>
+          <motion.div animate={{scale:10}} transition={{duration:2, delay:0.1}} className="product product3">
             <a href="#">
               <img src={img9} alt="" />
             </a>
               <h1>Controllers</h1>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="page_04">
@@ -182,17 +148,17 @@ function App() {
         <div className="page_04-04">
           <img src={img12} alt="" />
         </div>
-      </div>
+      </div> 
       <div className="main4">
         <div className="up">
           <h1>BEST SELLERS</h1>
           <button>View All</button>
         </div>
         <div className="down">
-          <img src={img3} className='img img4' alt="" />
-          <img src={img4} className='img img5' alt="" />
-          <img src={img5} className='img img3' alt="" />
-          <img src={img6} className='img img6' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:3}} src={img3} className='img img4' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:4}} src={img4} className='img img5' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:5}} src={img5} className='img img3' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:6}} src={img6} className='img img6' alt="" />
         </div>
           <div className="down-bottom">
             <div className="container container1">
@@ -229,10 +195,10 @@ function App() {
           <button>View All</button>
         </div>
         <div className="down-07">
-          <img src={img14} className='img img4' alt="" />
-          <img src={img15} className='img img5' alt="" />
-          <img src={img16} className='img img3' alt="" />
-          <img src={img17} className='img img6' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:3}} src={img14} className='img img4' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:4}} src={img15} className='img img5' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:5}} src={img16} className='img img3' alt="" />
+          <motion.img animate={{ y:-20, opacity:1}} transition={{duration:2, delay:6}} src={img17} className='img img6' alt="" />
         </div>
           <div className="down-bottom-07">
             <div className="content content1">
@@ -259,15 +225,31 @@ function App() {
       </div>
       <div className="main8">
         <div className="main8_text">
-          <h1>NEWSLETTER</h1>
-          <p>Sign up to receive updates on new <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;products and special offers</p>
-          <h2>Email*</h2>
-          <input type="email" />
-          <div className="main8_text_bottom">
-            <span><input type="checkbox" /></span>
-            <h6>Yes, subscribe me to your <br /> newsletter.</h6>
-            <button>Submit</button>
-          </div>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <h1>NEWSLETTER</h1>
+            <p>Sign up to receive updates on new <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;products and special offers</p>
+            <h2>Email*</h2>
+            <input
+              type="text"
+              id="Email"
+              {...register("Email", {
+                required: {
+                  value: true,
+                  message: "Enter Your Email Address",
+                },
+              })}
+            />
+            {errors.Email && (
+              <div className="error">{errors.Email.message}</div>
+            )}
+            <div className="main8_text_bottom">
+              <span><input type="checkbox" /></span>
+              <h6>Yes, subscribe me to your <br /> newsletter.</h6>
+              <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <div className="main9">

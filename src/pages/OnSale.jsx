@@ -34,7 +34,7 @@ const Product = () => {
           <div className="product_left">
             <div className="product_text">
               <ul className='ul1'>
-                <li><NavLink>Home</NavLink>&nbsp;&nbsp;<i class="bi bi-chevron-right"></i>On Sale</li>
+                <li><NavLink to="/">Home</NavLink>&nbsp;&nbsp;<i class="bi bi-chevron-right"></i>On Sale</li>
               </ul>
               <ul className='ul2'>
                 <li>Browse by</li>

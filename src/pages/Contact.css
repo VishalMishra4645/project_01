@@ -4,7 +4,7 @@
 }
 .Contact_main1{
     width: 100%;
-    height: 110vh;
+    height: 125vh;
     color: white;
     /* border: 2px solid white; */
 }
@@ -118,11 +118,11 @@
 }
 .btn{
     width: 64%;
-    height: 6vh;
+    height: 8vh;
     margin-top: 5%;
     margin-left: 13%;
     font-weight: 520;
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: #8858ED;
     color: white;
     border: 2px solid #8858ED;
@@ -138,10 +138,11 @@
 
 /* main2 start */
 
-.main2{
+.contact_main2{
     width: 100%;
-    height: 100vh;
+    height: 111vh;
     background-color: #2B1A44;
+    color: white;
     position: relative;
 }
 .contact_main2_top{
@@ -180,6 +181,13 @@
     /* gap: 35px; */
     /* border: 2px solid#fff; */
 }
+.contact_main2_link .active{
+  color: rgb(118, 118, 233);
+}
+.contact_main2_link span:hover{
+    transition: .6s;
+    color: rgb(118, 118, 233);
+  }
 span{
     cursor: pointer;
 }
@@ -239,3 +247,64 @@ hr{
     margin: auto;
     /* border: 2px solid white; */
 }
+
+    /* contact_main2 End */
+
+    /* footer Start */
+
+footer{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    /* border: 2px solid white; */
+}
+.contact_main10{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    margin-top: -20%;
+    justify-content: space-evenly;
+    /* border: 2px solid white; */
+}
+.contact_footer1{
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+.contact_footer2
+{
+    cursor: pointer;
+}
+.contact_main-footer {
+    position: relative;
+    top: 20%;
+    line-height: 400%;
+}
+.hr
+{
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+    border: 1px solid rgb(58, 57, 57);
+}
+.contact_main11{
+    width: 90%;
+    height: 20vh;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+}
+.contact_main11-left img{
+    margin-top: 2%;
+}
+.contact_main11-right{
+    margin-left: 30%;
+}
+.contact_main11-right i{
+    position: relative;
+    top: 20%;
+    font-size: 1.2rem;
+}    

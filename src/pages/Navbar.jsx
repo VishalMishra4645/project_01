@@ -37,7 +37,7 @@ const Navbar = () => {
 
             <div className={`nav ${active === 0 ? `active` : ''}`}>
                 <ul>
-                    <li><NavLink to="product"  color='blue' >Product</NavLink></li>
+                    <li><NavLink to="product" >Product</NavLink></li>
                     <li><NavLink to="onsale">On Sale</NavLink></li>
                     <li><NavLink to="contact">Contact</NavLink></li>
                     <li><NavLink to="login" className="col"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;Log In</NavLink></li>
